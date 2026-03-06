@@ -22,7 +22,7 @@ app = FastAPI()
 origins = [
     "http://localhost:3000",  # React frontend
     "http://127.0.0.1:3000",  # sometimes needed
-    "https://frontend-march.vercel.app/"
+    "https://frontend-march.vercel.app"
 ]
 
 app.add_middleware(

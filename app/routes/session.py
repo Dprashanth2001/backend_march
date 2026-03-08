@@ -13,8 +13,8 @@ def create_session(session: Session):
     if not session.start_time:
         session.start_time = current_timestamp()
 
-    if sessions_col.find_one({"session_id": session.session_id}):
-        raise HTTPException(400, f"Session ID '{session.session_id}' already exists")
+    if sessions_col.find_one({"session_id": session.session_id, "status": "active"}):
+        raise HTTPException(400, f"Session ID '{session.session_id}' already exists. End it before creating a new one.")
 
     sessions_col.insert_one(session.dict())
     return {"status": "success", "message": "Session created successfully"}

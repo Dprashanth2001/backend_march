@@ -7,3 +7,6 @@ load_dotenv()
 
 MONGO_URI = os.getenv("MONGO_API_URI")  # MongoDB connection string
 API_KEY = os.getenv("API_KEY")          # Optional: external device API key
+
+SENSOR_API_URL = os.getenv("SENSOR_API_URL")
+SENSOR_API_KEY = os.getenv("SENSOR_API_KEY")

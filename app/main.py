@@ -3,7 +3,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 # Import all routers
-from app.routes import auth, survey, session, device, admin
+from app.routes import auth, survey, session, device, admin, sensor
 
 app = FastAPI(title="Lab Survey Backend")
 
@@ -28,6 +28,7 @@ app.include_router(survey.router)
 app.include_router(session.router)
 app.include_router(device.router)
 app.include_router(admin.router)
+app.include_router(sensor.router)   # ✅ sensor proxy
 
 # Health check endpoint
 @app.get("/")

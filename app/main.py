@@ -11,7 +11,7 @@ app = FastAPI(title="Lab Survey Backend")
 origins = [
     "http://localhost:3000",
     "http://127.0.0.1:3000",
-    "https://your-frontend-domain.vercel.app"
+    "https://frontend-march.vercel.app",
 ]
 
 app.add_middleware(
